@@ -1,0 +1,44 @@
+pin=5566
+balance=30000
+print("WELCOME TO SBI")
+i=1
+while i<=3:
+    pinno=int(input("enter the pin\n"))
+    if pinno==pin:
+
+        print("withdrawl:w,deposite:d")
+        options=input("choose the options")
+        if options=='d':
+
+
+            depositeamount=int(input('enter the amount'))
+            print('open the box and put the amount')
+            print('sucess')
+            d=balance+depositeamount
+
+        else:
+            a=int(input('enter the amount to withdraw'))
+            if a<=balance:
+                print("krkrkrrrr")
+                print("success")
+                d=balance-a
+
+            else:
+
+                print('insufficient balance')
+
+        print('choose options')
+        ask=input('continue:c, exit:x')
+        if ask=='c':
+
+            print('the balace amount')
+            print(d)
+            break
+        else:
+            print('you are exited')
+            break
+    else:
+        print('pin is incorrect')
+    i=i+1
+else:
+    print('card is blocked')
